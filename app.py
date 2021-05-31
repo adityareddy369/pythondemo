@@ -1,4 +1,4 @@
-import pickle as flask
+import pickle as Flask
 # import numpy as np
 # import pandas as pd
 # from flask import Flask, request, render_template
