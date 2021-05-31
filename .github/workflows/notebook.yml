@@ -9,7 +9,7 @@ jobs:
     steps:
     -  uses: actions/checkout@v1
     -  name: Setup Python Env
-       uses: actions/setup-python@v.latest
+       uses: actions/setup-python@v.3.7.9
     -  name: Install requirements
        run: pip install  --quiet --requirement requirement.txt
     -  name: Lint code
