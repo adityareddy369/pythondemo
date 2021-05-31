@@ -3,6 +3,8 @@ name: Pipeline
 on: [push]
 env: 
    APPLICATION_NAME: python-notebook
+   REGISTRY : "https://hub.docker.com/repository/docker/adityareddy369/pythondemo"
+   REGISTRY_CREDENTIAL : ${{secrets.DOCKER_USERNAME}} &&  ${{secrets.DOCKER_PASSWORD}}
 jobs:
   lint:
     runs-on : ubuntu-18.04
