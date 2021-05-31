@@ -14,7 +14,7 @@ jobs:
        run: pip install  --quiet --requirement requirement.txt
     -  name: Lint code
        run: |
-         flake8  --ignore=E501, E231 * .py
+         flake8  --ignore=E501, E231 
          pylint  --disable=C0301 --disable=C00326
     -  name: Run unit tests
        run: |
