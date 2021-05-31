@@ -4,7 +4,7 @@ on: [push]
 env: 
    APPLICATION_NAME: python-notebook
    REGISTRY : "https://hub.docker.com/repository/docker/adityareddy369/pythondemo"
-   REGISTRY_CREDENTIAL : ${{secrets.DOCKER_USERNAME}} &&  ${{secrets.DOCKER_PASSWORD}}
+   REGISTRY_CREDENTIAL : ${{secrets.DOCKER_USERNAME}} &&  ${{secrets.DOCKER_PASSWORD}}  
 jobs:
   lint:
     runs-on : ubuntu-18.04
@@ -20,3 +20,8 @@ jobs:
     -  name: Run unit tests
        run: |
          python - m unitest  --verbose --failfast
+    - name: Build and tag image
+      run: docker build -t "dockerhuburllatest" .
+    - name: Push to docker hub image registry
+      run: docker push dockerhuburllatest
+
