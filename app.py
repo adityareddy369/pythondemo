@@ -5,4 +5,4 @@ import pickle as Flask
 
 
 APP = Flask(__name__, template_folder='templates')
-MODEL = pickle.load(open('model.pkl', 'rb'))
+MODEL = Flask.load(open('model.pkl', 'rb'))
